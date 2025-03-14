@@ -13,29 +13,11 @@ public class Book {
         this.isBorrowed = false;
     }
 
-    public Book(String bookID, String title) {
-       this(bookID, title, title);
-    }
+    public String getBookID() { return bookID; }
+    public String getTitle() { return title; }
+    public String getAuthor() { return author; }
+    public boolean isBorrowed() { return isBorrowed; }
 
-    public String getBookID() {
-        return bookID;
-    }
-
-    public boolean isBorrowed() {
-        return isBorrowed;
-    }
-
-    public void borrowBook() {
-        this.isBorrowed = true;
-    }
-
-    public void returnBook() {
-        this.isBorrowed = false;
-    }
-
-    @Override
-    public String toString() {
-        return "ID: " + bookID + " | Title: " + title + " | Author: " + author + " | Status: "
-                + (isBorrowed ? "Borrowed" : "Available");
-    }
+    public void borrowBook() { this.isBorrowed = true; }
+    public void returnBook() { this.isBorrowed = false; }
 }

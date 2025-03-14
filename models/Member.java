@@ -13,24 +13,11 @@ public class Member {
         this.fineAmount = 0;
     }
 
-    public String getMemberID() {
-        return memberID;
-    }
+    public String getMemberID() { return memberID; }
+    public String getName() { return name; }
+    public String getEmail() { return email; }
+    public double getFineAmount() { return fineAmount; }
 
-    public double getFineAmount() {
-        return fineAmount;
-    }
-
-    public void addFine(double amount) {
-        this.fineAmount += amount;
-    }
-
-    public void clearFine() {
-        this.fineAmount = 0;
-    }
-
-    @Override
-    public String toString() {
-        return "ID: " + memberID + " | Name: " + name + " | Email: " + email + " | Fine: $" + fineAmount;
-    }
+    public void addFine(double amount) { this.fineAmount += amount; }
+    public void clearFine() { this.fineAmount = 0; }
 }
